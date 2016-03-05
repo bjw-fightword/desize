@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+
+		}
+ .image-show-grid {
+    display: block;
+    position: relative;
+    width: 3300px;
+    height: 678px;
+}
+
+.image-show-grid::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 3300px 678px;
+    height: 678px;
+    width: 3300px;
+    background-image: url("./desize.png");
+    -webkit-animation-name: before;
+    animation-name: before;
+    -webkit-animation-duration: 160s;
+    animation-duration: 160s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+    .image-show-grid::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 3300px 678px;
+    height: 678px;
+    width: 3300px;
+    background-image: url("./desize.png");
+    -webkit-animation-name: after;
+    animation-name: after;
+    -webkit-animation-duration: 160s;
+    animation-duration: 160s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+	@-webkit-keyframes before {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+
+    50% {
+        -webkit-transform: translate3d(-3300px, 0, 0);
+        transform: translate3d(-3300px, 0, 0)
+    }
+
+    50.001% {
+        -webkit-transform: translate3d(3300px, 0, 0);
+        transform: translate3d(3300px, 0, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+}
+
+@-webkit-keyframes after {
+    0% {
+        -webkit-transform: translate3d(3300px, 0, 0);
+        transform: translate3d(3300px, 0, 0)
+    }
+
+    50% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(-3300px, 0, 0);
+        transform: translate3d(-3300px, 0, 0)
+    }
+}
+
+section{
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+	</style>
+</head>
+
+<body>
+    <section>
+        <figure class="image-show-grid fog-active"></figure> 
+    </div>
+    </section>
+	
+</body>
+</html>
